@@ -29,7 +29,6 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = 3000;
 
 // Configurar Stripe com a chave secreta
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -63,6 +62,7 @@ app.get('/', (req, res) => {
     res.json('Servidor Stripe ...rodando');
 })
 
-app.listen(port, () => {
-    console.log(`Servidor Stripe ...rodando em http://127.0.0.1:${port}`);
-});
+let port = process.env.PORT || 3000
+app.listen(port, (req, res) => {
+  console.log(`Servidor rodando na porta: ${port}`)
+})
