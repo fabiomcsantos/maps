@@ -5,7 +5,6 @@ import { useStripe } from '@stripe/stripe-react-native';
 
 export default function Checkout(props) {
   
-  
   const { initPaymentSheet, presentPaymentSheet } = useStripe();
   
   async function initializePaymentSheet(){
@@ -74,8 +73,6 @@ export default function Checkout(props) {
 
     //navigation.goBack()
     }
-    }
-
 
   useEffect( () => {
     async function sendServer() {
@@ -96,7 +93,7 @@ export default function Checkout(props) {
       <Text>Seu destino é: {props.route.params.address}</Text>
     </View>
     )
-
+  }
 
 const styles = StyleSheet.create({
   container: {
