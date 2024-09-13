@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   },
   search: {
     height: '40%',
-    backgroundColor: 'gray'
+   
   },
   distance: {
     flex: 1,
